@@ -15,4 +15,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/prepare
       - run: npx eslint .
-      - run: eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0
+      - run: npx eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0
