@@ -2,9 +2,13 @@
   "name": "talentafri",
   "version": "1.0.0",
   "description": "Project for talentafri",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/src/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/src/server.js",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/src/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -22,6 +26,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.7",
     "prettier": "^3.3.3"
   },
   "lint-staged": {
@@ -29,5 +34,20 @@
       "eslint",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^5.3.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-async-handler": "^1.2.0",
+    "express-rate-limit": "^7.4.0",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0"
   }
 }
