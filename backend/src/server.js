@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import 'dotenv/config';
 import connectDB from './config/db.js';
+import productRoutes from './routes/api/product.js';
 
 const app = express();
 
@@ -16,9 +17,15 @@ if (process.env.NODE_ENV === 'development') {
 
 connectDB();
 
+// Middleware
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Routes Middleware
+
+app.use('/api/v1/product', productRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({
