@@ -9,6 +9,7 @@
     "start": "node backend/src/server.js",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/src/server.js",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/src/server.js",
+    "seeder": "node backend/src/utils/seeder.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
