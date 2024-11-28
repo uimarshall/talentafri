@@ -1,0 +1,38 @@
+[
+  {
+    "name": "abacus",
+    "user": "65e041f22326f105f4d233e4",
+    "price": "43.50",
+    "description": "A better testing device by for Maths",
+    "ratings": 4.3,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Books",
+    "seller": "Utay",
+    "stock": 32,
+    "numOfReviews": 32,
+    "reviews": []
+  },
+  {
+    "name": "Aserty",
+    "user": "65e041f44326f105f4d233f8",
+    "price": "100.50",
+    "description": "A better testing device by for Maths",
+    "ratings": 2.6,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Kids shirt",
+    "seller": "Branby",
+    "stock": 50,
+    "numOfReviews": 5,
+    "reviews": []
+  }
+]
