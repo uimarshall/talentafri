@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Product 1",
+    "price": 19.99,
+    "description": "Description for product 1.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 1",
+    "stock": 50,
+    "numOfReviews": 5,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233f6"
+  },
+  {
+    "name": "Product 2",
+    "price": 49.99,
+    "description": "Description for product 2.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 2",
+    "stock": 30,
+    "numOfReviews": 8,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233f7"
+  },
+  {
+    "name": "Product 3",
+    "price": 9.99,
+    "description": "Description for product 3.",
+    "ratings": 3.9,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 3",
+    "stock": 100,
+    "numOfReviews": 12,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233d3"
+  },
+  {
+    "name": "Product 4",
+    "price": 24.99,
+    "description": "Description for product 4.",
+    "ratings": 4.0,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 4",
+    "stock": 75,
+    "numOfReviews": 7,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233e2"
+  },
+  {
+    "name": "Product 5",
+    "price": 39.99,
+    "description": "Description for product 5.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 5",
+    "stock": 20,
+    "numOfReviews": 15,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233e7"
+  },
+  {
+    "name": "Product 6",
+    "price": 14.99,
+    "description": "Description for product 6.",
+    "ratings": 3.5,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 6",
+    "stock": 60,
+    "numOfReviews": 6,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233e8"
+  },
+  {
+    "name": "Product 7",
+    "price": 29.99,
+    "description": "Description for product 7.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 7",
+    "stock": 40,
+    "numOfReviews": 9,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233e9"
+  },
+  {
+    "name": "Product 8",
+    "price": 59.99,
+    "description": "Description for product 8.",
+    "ratings": 4.9,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 8",
+    "stock": 10,
+    "numOfReviews": 20,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233d2"
+  },
+  {
+    "name": "Product 9",
+    "price": 34.99,
+    "description": "Description for product 9.",
+    "ratings": 4.1,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 9",
+    "stock": 25,
+    "numOfReviews": 11,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233f2"
+  },
+  {
+    "name": "Product 10",
+    "price": 44.99,
+    "description": "Description for product 10.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "products/dfgt",
+        "url": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      }
+    ],
+    "category": "Category 10",
+    "stock": 15,
+    "numOfReviews": 18,
+    "reviews": [],
+    "user": "95e041f22326f105f4d233f1"
+  }
+]

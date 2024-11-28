@@ -4,6 +4,9 @@
   "description": "Project for talentafri",
   "type": "module",
   "main": "src/server.js",
+  "engines": {
+    "node": ">=8.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/src/server.js",

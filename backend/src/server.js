@@ -6,8 +6,27 @@ import morgan from 'morgan';
 import 'dotenv/config';
 import connectDB from './config/db.js';
 import productRoutes from './routes/api/product.js';
+import { errorMiddleware, notFound } from './middlewares/errorsMiddleware.js';
 
 const app = express();
+
+const isAuthenticated = {
+  isLogin: true,
+  isAdmin: false,
+};
+
+app.use((req, res, next) => {
+  console.log('====================================');
+  console.log('My middleware was called');
+  console.log('====================================');
+  if (isAuthenticated.isLogin) {
+    next(); // This will allow the request to continue to the next middleware
+  } else {
+    res.json({
+      message: 'You are not authorized',
+    });
+  }
+});
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -26,6 +45,10 @@ app.use(cookieParser());
 // Routes Middleware
 
 app.use('/api/v1', productRoutes);
+
+// Custom Error Middleware to handle error
+app.use(notFound);
+app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
   console.log(req.query.school);
