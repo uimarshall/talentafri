@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/prefer-default-export
 
 import Product from '../model/Product.js';
+import ErrorHandler from '../utils/errorHandler.js';
 
 const newProduct = async (req, res, next) => {
   const productCreated = await Product.create(req.body);
@@ -28,10 +29,11 @@ const getSingleProduct = async (req, res, next) => {
   const singleProductFound = await Product.findById(req.params.productId);
 
   if (!singleProductFound) {
-    return res.status(404).json({
-      success: false,
-      message: 'Product not found',
-    });
+    // return res.status(404).json({
+    //   success: false,
+    //   message: 'Product not found',
+    // });
+    return next(new ErrorHandler('Product not found', 404));
   }
 
   return res.status(200).json({
