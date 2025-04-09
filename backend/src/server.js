@@ -15,18 +15,18 @@ const isAuthenticated = {
   isAdmin: false,
 };
 
-app.use((req, res, next) => {
-  console.log('====================================');
-  console.log('My middleware was called');
-  console.log('====================================');
-  if (isAuthenticated.isLogin) {
-    next(); // This will allow the request to continue to the next middleware
-  } else {
-    res.json({
-      message: 'You are not authorized',
-    });
-  }
-});
+// app.use((req, res, next) => {
+//   console.log('====================================');
+//   console.log('My middleware was called');
+//   console.log('====================================');
+//   if (isAuthenticated.isLogin) {
+//     next(); // This will allow the request to continue to the next middleware
+//   } else {
+//     res.json({
+//       message: 'You are not authorized',
+//     });
+//   }
+// });
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -51,7 +51,7 @@ app.use(notFound);
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-  console.log(req.query.school);
+  // console.log(req.query.school);
   res.status(200).json({
     message: 'Hello World',
   });
