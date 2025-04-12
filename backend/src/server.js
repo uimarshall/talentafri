@@ -28,10 +28,6 @@ const isAuthenticated = {
 //   }
 // });
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
-}
-
 // Connect to MongoDB Database
 
 connectDB();
@@ -41,6 +37,10 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 // Routes Middleware
 
@@ -65,7 +65,7 @@ app.post('/', (req, res) => {
   });
 });
 
-app.get('/api/v1/user', (req, res) => {
+app.get('/api/v1/users', (req, res) => {
   res.status(200).json({
     user: {
       name: 'Debo',
