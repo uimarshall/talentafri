@@ -7,8 +7,23 @@ import 'dotenv/config';
 import connectDB from './config/db.js';
 import productRoutes from './routes/api/product.js';
 import { errorMiddleware, notFound } from './middlewares/errorsMiddleware.js';
+import userRoutes from './routes/api/user.js';
 
 const app = express();
+
+// Connect to MongoDB Database
+
+connectDB();
+
+// Middleware
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 const isAuthenticated = {
   isLogin: true,
@@ -28,23 +43,10 @@ const isAuthenticated = {
 //   }
 // });
 
-// Connect to MongoDB Database
-
-connectDB();
-
-// Middleware
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
-}
-
 // Routes Middleware
 
 app.use('/api/v1', productRoutes);
+app.use('/api/v1/auth', userRoutes);
 
 // Custom Error Middleware to handle error
 app.use(notFound);
