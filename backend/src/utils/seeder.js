@@ -8,7 +8,7 @@ import path from 'path';
 
 import connectDb from '../config/db.js';
 // import products from '../data/products.json' assert { type: 'json' };
-import Product from '../model/Product.js';
+import Product from '../models/Product.js';
 
 // Correctly resolve the path to products.json relative to this script
 const __dirname = path.resolve();
