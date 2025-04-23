@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import express from 'express';
-import { registerUser, loginUser } from '../../controllers/userAuthController.js';
+import { registerUser, loginUser, logoutUser } from '../../controllers/userAuthController.js';
 
 const router = express.Router();
 
@@ -10,5 +10,8 @@ const router = express.Router();
 router.post('/register', registerUser);
 // @desc Login a user
 router.post('/login', loginUser);
+
+// Log out
+router.post('/logout', logoutUser);
 
 export default router;
