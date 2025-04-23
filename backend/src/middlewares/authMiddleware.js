@@ -1,7 +1,8 @@
+/* eslint-disable import/extensions */
 import jwt from 'jsonwebtoken';
 import asyncHandler from 'express-async-handler';
-import ErrorHandler from '../utils/errorHandler';
-import User from '../models/User';
+import ErrorHandler from '../utils/errorHandler.js';
+import User from '../models/User.js';
 
 // Check if user is authenticated or not
 const requireAuthentication = asyncHandler(async (req, res, next) => {
@@ -16,7 +17,10 @@ const requireAuthentication = asyncHandler(async (req, res, next) => {
 
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-  req.user = await User.findById(decoded.id); // req.user is now available in all protected routes, so we can use it to get the user id, name, email, etc. and use it to get the user profile. See backend\src\controllers\userAuthController.js for an example.
+  req.user = await User.findById(decoded.id); // req.user is now available in all protected routes, so we can use it to get the user id, name, email, etc. and use it to get the user profile.
+  //  See backend\src\controllers\userAuthController.js for an example.
 
   next();
 });
+
+export default requireAuthentication;
