@@ -19,7 +19,7 @@ connectDB();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser()); // This will parse the cookies and make them available in req.cookies
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
