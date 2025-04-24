@@ -15,7 +15,8 @@ const requireAuthentication = asyncHandler(async (req, res, next) => {
   }
   // If token exists, we will verify it and get the user id from it. Then we will use that user id to get the user profile from the database and attach it to the request object. This way, we will have access to the user profile in all the protected routes.
 
-  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  const decoded = jwt.verify(token, process.env.JWT_SECRET); // This the actual user that was used to sign the token. The token is signed with the user id and the secret key. So we can use the secret key to verify the token and get the user id from it.
+  // console.log('Decoded:', decoded);
 
   req.user = await User.findById(decoded.id); // req.user is now available in all protected routes, so we can use it to get the user id, name, email, etc. and use it to get the user profile.
   //  See backend\src\controllers\userAuthController.js for an example.
