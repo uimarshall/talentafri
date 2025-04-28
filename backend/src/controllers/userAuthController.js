@@ -5,7 +5,7 @@ import ErrorHandler from '../utils/errorHandler.js';
 import generateToken from '../utils/generateToken.js';
 
 // @desc Register a new user
-// @route POST /api/v1/users/register
+// @route POST /api/v1/auth/register
 // @access Public
 const registerUser = asyncHandler(async (req, res, next) => {
   const { firstName, lastName, email, username, password, bio, location } = req.body;
@@ -42,7 +42,7 @@ const registerUser = asyncHandler(async (req, res, next) => {
 });
 
 // @desc: Login a user
-// @route: /api/v1/users/login
+// @route: /api/v1/auth/login
 // @access: protected
 
 const loginUser = asyncHandler(async (req, res, next) => {
@@ -78,4 +78,22 @@ const loginUser = asyncHandler(async (req, res, next) => {
   generateToken(userFound, 200, res);
 });
 
-export { registerUser, loginUser };
+// @desc: Logout a user
+// @route: /api/v1/auth/logout
+// @access: protected
+
+const logoutUser = asyncHandler(async (req, res, next) => {
+  // To logout is to clear the cookie stored during login/sign up,
+  // hence set token to 'null' and expires it immediately with Date.now() to remove it from the session
+  res.cookie('token', null, {
+    expires: new Date(Date.now()),
+    httpOnly: true,
+  });
+
+  res.status(200).json({
+    success: true,
+    message: 'Logged out successfully',
+  });
+});
+
+export { registerUser, loginUser, logoutUser };

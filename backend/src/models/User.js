@@ -186,7 +186,8 @@ userSchema.pre('save', async function (next) {
     // if password is not modified, skip hashing or don't update the password
     next();
   }
-  const hash = await bcrypt.hash(this.password, 10); // 10 is the number of rounds or salt value that makes the password strong and it is the recommended value, a higher value will take more time to hash the password but stronger.
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(this.password, salt); // 10 is the number of rounds or salt value that makes the password strong and it is the recommended value, a higher value will take more time to hash the password but stronger.
   this.password = hash;
 });
 
